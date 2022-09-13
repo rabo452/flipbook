@@ -1,0 +1,32 @@
+{% extends '/admin/pages/admin_page.html' %}
+
+
+{% block css %} <link rel="stylesheet" href="{{ url_for('static', filename='/admin/css/admin_panel.css')}}"> {% endblock %}
+
+{% block content %}
+
+<div id="user-table">
+
+  <div class="user-info">
+    <span> User id </span>
+    <span> Username  </span>
+    <span> Date registered </span>
+    <span> Flipbooks created </span>
+    <span> Activated </span>
+    <span> User details </span>
+  </div>
+
+  {% for user in users %}
+    <div class="user-info">
+      <span> {{ user['id'] }} </span>
+      <span> {{ user['username'] }} </span>
+      <span> {{ user['registered'] }} </span>
+      <span> {{ user['flip_books_count'] }} </span>
+      <span> {{ user['activated'] }} </span>
+      <span> <a href="{{ url_for('user_page', user_id=user['id']) }}"> <input type="button" name="" value="View user"> </a> </span>
+    </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.topnav p {
+    text-transform: uppercase;
+    color: white;
+    font-size: 3rem;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.topnav {
+    background-color: #333;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlinks {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .navlinks a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav .navlinks a.active {
+    background-color: rgb(29, 131, 255);
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+section {
+    overflow: hidden;
+    min-height: auto;
+}
+
+section.conversion {
+    background: url('../images/background.jpg');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conversion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.maintext {
+    margin: 10px;
+    text-align: center;
+}
+
+ h1 {
+    font-size: 3rem;
+    color: black;
+}
+small{
+    color: black;
+}
+
+.mainform {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(7, 7, 7, 0.383);
+    color: white;
+    border-radius: 10px;
+    width: 500px;
+}
+
+ #real-file{
+     display: none;
+ }
+
+ #custom-button {
+    padding: 10px;
+    color: white;
+    background-color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #custom-button:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
+  #custom-text {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+  }
+
+.margin-form {
+    margin: 10px;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+.feature-item {
+    padding: 20px 10px;
+    height: 500px;
+    line-height: 20px;
+    z-index: -1;
+}
+
+.features .fa, .fas {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.desc {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #999999;
+    font-size: medium;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 600px) {
+
+    h2{
+        font-size: 3.5rem;
+    }
+    .mainform {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        padding: 30px;
+        background: rgba(7, 7, 7, 0.383);
+        color: white;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .topnav .icon {
+        display: block;
+        font-size: 3rem;
+        margin-right: 10px;
+    }
+    .topnav p {
+        font-size: 2.5rem;
+    }
+    .navlinks {
+        height: 260px;
+        padding: 40px;
+        width: 100%;
+        position: fixed;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        float: right;
+        background: black;
+        opacity: 0;
+        cursor: none;
+        user-select: none;
+        pointer-events: none;
+    }
+    .navlinks.responsive {
+        opacity: 1;
+        cursor: pointer;
+        pointer-events: all;
+        transition: opacity .50s ease;
+    }
+    .navlinks-links {
+        width: 100%;
+        border-top: 1px solid white;
+    }
+    .topnav .navlinks a:hover {
+        background-color: black;
+        color: white;
+    }
+    .topnav .navlinks a:active {
+        background-color: black;
+        color: white;
+    }
+}
+
+
+.form-text {
+  text-align: center;
+  color: black;
+  font-size: 1.2em;
+}
+
+.google-docx-container, .brand-name, .password-field {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.password-field {
+  display: none;
+}
+
+.google-docx-container > input, .brand-name > input, .password-field > input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  padding-left: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.access-users, .form-password, .disable-click {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.form-line {
+  width: 100%;
+  height: 4px;
+  background: black;
+  margin-top: 20px;
+}
+
+
+.logo-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.logo-title {
+  text-align: center;
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+#real-logo-file {
+  display: none;
+}
+
+.upload-logo-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-upload-btn {
+  margin-right: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo-upload-text {
+  color: black;
+  font-size: 1.1em;
+}

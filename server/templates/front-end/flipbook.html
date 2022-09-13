@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Flipbook</title>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Flipbook site" />
+	<meta property="og:description" content="User share with you the flipbook page" />
+	<meta property="og:image" content="{{ facebook_logo_image_url }}" />
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link href="{{ url_for('static', filename='/front-end/booklet/jquery.booklet.1.1.0.css') }}" type="text/css" rel="stylesheet" media="screen" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='/front-end/css/flipbook.css') }}">
+	<link rel="icon" href="{{ url_for('static', filename='/front-end/images/logo.png') }}">
+
+
+</head>
+
+<body>
+	<div class="book-container" id="bookcontainer">
+
+		<div class="book_wrapper">
+			<a id="next_page_button" onclick="pageSound()"></a>
+			<a id="prev_page_button" onclick="pageSound()"></a>
+			<audio src="{{ url_for('static', filename='/front-end/audio/flip.mp3') }}" id="page"></audio>
+
+			<div id="mybook" style="display:none;">
+				<div class="b-load"></div>
+			</div>
+		</div>
+
+		<div class="book-pages"></div>
+		<div class="pages-links">
+			<div class="title">Flip Book links:</div>
+		</div>
+
+	</div>
+
+	<div class="customize" id="customise">
+		<div class="views-block"><span>0</span></div>
+
+		<div id="logotype-block"><img src="" alt=""></div>
+		<div id="brand"></div>
+		<a id='external-file'><button id="download">Download External file</button></a>
+		<div class="space"></div>
+		<label for="favcolor" class="labelcolor">Choose Your Background Color :</label>
+		<input type="color" id="color" name="favcolor" value="#ffffff" id="color">
+		<div class="space"></div>
+		<button id="fullscreen" data-toggle-fullscreen>Toggle Fullscreen</button>
+		<div class="space"></div>
+		<div class="zoom-control">
+			<a href="#" onclick="myZoomIn()">
+				<i class="fas fa-search-plus"></i>
+			</a>
+			<a href="#" onclick="myZoomOut()">
+				<i class="fas fa-search-minus"></i>
+			</a>
+		</div>
+
+		<div class="search-block">
+			<h3>Search page by text</h3>
+			<input id="search_input" type="text" placeholder="text">
+		</div>
+	</div>
+
+	<div id="share-block">
+		<div id="sub-share-block">
+			<input type="button" value='Get embed code' id="get-html-block">
+			<div class="fb-share-button" data-href='{{ request.url }}'  data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+			<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-share-url="{{ request.url }}" data-comment="User share with you the flipbook page" data-size="large"></script>
+		</div>
+	</div>
+
+
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="ONja5LNm"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+	<script src="{{ url_for('static', filename='/front-end/js/server_urls.js') }}" charset="utf-8"></script>
+	<script src="{{ url_for('static', filename='/front-end/booklet/jquery.easing.1.3.js') }}"></script>
+	<script src="{{ url_for('static', filename='/front-end/booklet/jquery.booklet.1.1.0.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='/front-end/js/flipbook.js') }}"></script>
+</body>
+</html>
