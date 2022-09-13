@@ -1,0 +1,25 @@
+#user-table {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 10px;
+}
+#user-table > div {
+  margin-top: 10px;
+}
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.3em;
+}
+.user-info:nth-child(1) {
+  font-size: 1.8em;
+}
+.user-info span {
+  width: 20%;
+  text-align: center;
+}
+.user-info input[type='button'] {
+  width: 50%;
+}

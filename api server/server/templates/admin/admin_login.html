@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/admin/css/admin_login.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div id="main">
+  <form method="post" id="LogInBlock">
+    <h2>Admin panel log in</h2>
+    {% if error %}
+    <p class="error"> {{ error }} </p>
+    {% endif %}
+    <div class="row">
+      <input type="text" maxlength="20" name="username" placeholder="Username" value="">
+    </div>
+    <div class="row">
+      <input type="password" maxlength="20" name="password" placeholder="Password" value="">
+    </div>
+    <div class="row">
+      <input type="submit" name="" value="Log in">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

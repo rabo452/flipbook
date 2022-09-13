@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | CodingNepal</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='/front-end/css/login.css') }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="{{ url_for('static', filename='/front-end/images/logo.png') }}">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login
+            </div>
+            <div class="title signup">
+               Signup
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form  class="login">
+                  <div class="field">
+                     <input type="email" id='login-email' placeholder="Email Address">
+                  </div>
+                  <div class="field">
+                     <input type="password" id='login-password' placeholder="Password">
+                  </div>
+                  <div class="pass-link">
+                     <a href="/forgot">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="button" id='login-button' value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="#signup">Signup now</a>
+                  </div>
+               </form>
+               <form class="signup" id="signup">
+                  <div class="field">
+                     <input id='sign-up-email' type="email" placeholder="Email Address">
+                  </div>
+                  <div class="field">
+                     <input id='sign-up-password' type="password" placeholder="Password">
+                  </div>
+                  <div class="field">
+                     <input type="password" id='sign-up-again-password' placeholder="Confirm password">
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="button" id='sign-up-button' value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+      <script src="{{ url_for('static', filename='/front-end/js/server_urls.js') }}" charset="utf-8"></script>
+      <script src="{{ url_for('static', filename='/front-end/js/login.js') }}" charset="utf-8"></script>
+   </body>
+</html>
